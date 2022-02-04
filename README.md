@@ -44,7 +44,7 @@ Project is created with:
 1. Install Python on computer. 
 2. Install microfaune (https://github.com/microfaune/microfaune) and any other 
   packages you may need such as: pandas, argparse, yaml, os, scipy, pydub, 
-  shutil, math, and tensorflow. 
+  shutil, math, and tensorflow (version 2.3.0 ideal). 
 3. Create folders for source of audio file and a destination folder for where 
    you would like split audio files. 
 4. See and do #setup 
