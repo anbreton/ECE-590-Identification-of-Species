@@ -28,6 +28,7 @@ Project is created with:
 * SplitAudio.py:
     1. Open SplitAudio.yaml file and edit to have paths to the folder containing the 
     audio files to split and folder for a destination for the split audio files. 
+    
     2. Example of yaml file: 
           * foldername: "/Users/amandabreton/Desktop/ECE590/AudioFiles_ToSplit/"
           * lengthofsplit: 1
@@ -36,20 +37,22 @@ Project is created with:
 * BirdNoBird.py:
     1. Open BirdNoBird.yaml file and edit to have paths to the folder containing the 
     split audio files a folder for a destination for CSV file output. 
+    
     2. Example of yaml file: 
-      * foldername: "/Users/amandabreton/Desktop/ECE590/AudioFiles_ToAnalyze"
-      * CSVpath: "/Users/amandabreton/Desktop/ECE590"
+          * foldername: "/Users/amandabreton/Desktop/ECE590/AudioFiles_ToAnalyze"
+          * CSVpath: "/Users/amandabreton/Desktop/ECE590"
 
 *  SortConfidences.py: 
     1. Open SortConfidences.yaml file and edit to have the desired threshold as
     a cut off. Also edit to have paths of the analyzed audio files and where you
     want the files with high/low confidence. 
+    
     2. Example of yaml file:
-      * CSVpath: "/Users/amandabreton/Desktop/BirdConfidences.csv"
-      * source: "/Users/amandabreton/Desktop/ECE590/AudioFiles_DoneAnalyzing/"
-      * highdestination: "/Users/amandabreton/Desktop/ECE590/HighConfidence/"
-      * lowdestination: "/Users/amandabreton/Desktop/ECE590/LowConfidence/"
-      * threshold: 0.5
+        * CSVpath: "/Users/amandabreton/Desktop/BirdConfidences.csv"
+        * source: "/Users/amandabreton/Desktop/ECE590/AudioFiles_DoneAnalyzing/"
+        * highdestination: "/Users/amandabreton/Desktop/ECE590/HighConfidence/"
+        * lowdestination: "/Users/amandabreton/Desktop/ECE590/LowConfidence/"
+        * threshold: 0.5
 
 
 ## [Instructions](#instructions)
