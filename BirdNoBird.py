@@ -15,6 +15,7 @@ import argparse
 import yaml
 import os
 import scipy.io.wavfile
+import shutil
 # %%
 parser = argparse.ArgumentParser()
 parser.add_argument('config_filename')
@@ -24,7 +25,12 @@ with open(CONFIG_FILE) as f:
     configs = yaml.load(f, Loader=yaml.SafeLoader)
 folder = configs['foldername']
 CSVpath = configs['CSVpath']
+destination = configs['destination']
 
+# %%
+folder = "/Users/amandabreton/Desktop/ECE590/AudioFiles_ToAnalyze/"
+CSVpath = "/Users/amandabreton/Desktop/ECE590"
+destination = "/Users/amandabreton/Desktop/ECE590/AudioFiles_DoneAnalyzing/"
 # %% getting which files are audio
 if os.path.exists(os.path.join(folder, ".DS_Store")):
     os.remove(os.path.join(folder, ".DS_Store"))
@@ -45,23 +51,32 @@ for filename in os.listdir(folder):
         nonimagecount = +1
         continue
 
-soundList = [os.path.join(folder, name) for name in os.listdir(folder) if
-             os.path.isfile(os.path.join(folder, name))]
-
+# soundList = [os.path.join(folder, name) for name in os.listdir(folder) if
+#             os.path.isfile(os.path.join(folder, name))]
+audioList = []
+for filename in os.listdir(folder):
+    if filename.endswith(".WAV") or filename.endswith(".wav"):
+        audioList.append(filename)
+    
+    else:
+        continue
 # %% Run microfaune
-audioPaths = []
+audioName = []
 confidence = []
 
-for i in range(len(soundList)):
+for i in range(len(audioList)):
     detector = RNNDetector()
-    currentSound = soundList[i]
-    global_score, local_score = detector.predict_on_wav(currentSound)
-    s, audData = scipy.io.wavfile.read(currentSound)
-    audioPaths.append(currentSound)
+    currentSoundPath = folder + audioList[i]
+    currentSound = audioList[i]
+    global_score, local_score = detector.predict_on_wav(currentSoundPath)
+    s, audData = scipy.io.wavfile.read(currentSoundPath)
+    audioName.append(currentSound)
     confidence.append(global_score)
+    shutil.move(folder + currentSound, destination + currentSound)
+
 
 # %% print to a CSV file to view
-df = pd.DataFrame(list(zip(soundList, confidence)),
-                  columns=['Audio_Paths', 'Highest_Confidence'])
+df = pd.DataFrame(list(zip(audioList, confidence)),
+                  columns=['Audio_Name', 'Highest_Confidence'])
 path = CSVpath + "/BirdConfidences.csv"
 df.to_csv(path)

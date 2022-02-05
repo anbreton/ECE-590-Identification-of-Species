@@ -12,7 +12,7 @@ import math
 import argparse
 import yaml
 import shutil
-import os 
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('config_filename')
@@ -22,7 +22,6 @@ with open(CONFIG_FILE) as f:
     configs = yaml.load(f, Loader=yaml.SafeLoader)
 folder = configs['foldername']
 source = folder
-#file = configs['filename']
 duration = configs['lengthofsplit']  # length in min
 destination = configs['analyzefolder']
 # Mac/Linux use: '/'
@@ -75,7 +74,7 @@ audioList = []
 for filename in os.listdir(folder):
     if filename.endswith(".WAV"):
         audioList.append(filename)
-        print(filename)
+        # print(filename)
     else:
         nonimagecount = +1
         continue
