@@ -1,0 +1,5 @@
+CSVpath: "/Users/amandabreton/Desktop/BirdConfidences.csv"
+source: "/Users/amandabreton/Desktop/ECE590/AudioFiles_DoneAnalyzing/"
+highdestination: "/Users/amandabreton/Desktop/ECE590/HighConfidence/"
+lowdestination: "/Users/amandabreton/Desktop/ECE590/LowConfidence/"
+threshold: 0.5

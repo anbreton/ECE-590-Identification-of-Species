@@ -38,6 +38,17 @@ Project is created with:
       foldername: "/Users/amandabreton/Desktop/ECE590/AudioFiles_ToAnalyze"
       CSVpath: "/Users/amandabreton/Desktop/ECE590"
 
+*  SortConfidences.py: 
+    1. Open SortConfidences.yaml file and edit to have the desired threshold as
+    a cut off. Also edit to have paths of the analyzed audio files and where you
+    want the files with high/low confidence. 
+      Example of yaml file:
+      CSVpath: "/Users/amandabreton/Desktop/BirdConfidences.csv"
+      source: "/Users/amandabreton/Desktop/ECE590/AudioFiles_DoneAnalyzing/"
+      highdestination: "/Users/amandabreton/Desktop/ECE590/HighConfidence/"
+      lowdestination: "/Users/amandabreton/Desktop/ECE590/LowConfidence/"
+      threshold: 0.5
+
 
 ## [Instructions](#instructions)
 
@@ -45,10 +56,15 @@ Project is created with:
 2. Install microfaune (https://github.com/microfaune/microfaune) and any other 
   packages you may need such as: pandas, argparse, yaml, os, scipy, pydub, 
   shutil, math, and tensorflow (version 2.3.0 ideal). 
-3. Create folders for source of audio file and a destination folder for where 
-   you would like split audio files. 
+3. Create folders for: 
+    * source of audio file(s), ideally: "AudioFiles_ToSplit""
+    * destination folder for split audio files ideally: "AudioFiles_ToAnalyze"
+    * destination folder for analyzed files ideally: "AudioFiles_DoneAnalyzing"
+    * folder for high confidence files ideally: "HighConfidence"
+    * folder for low confidence files ideally: "LowConfidence"
 4. See and do #setup 
 5. Go to terminal and cd into the folder containing the code. 
 6. In the terminal type: python SplitAudio.py SplitAudio.yaml
 7. In the terminal type: python BirdNoBird.py BirdNoBird.yaml
 8. Wait til done. You can ignore tensorflow warnings. 
+9. In the terminal type: python SortConfidences.py SortConfidences.yaml 
