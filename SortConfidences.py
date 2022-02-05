@@ -4,6 +4,9 @@
 Created on Fri Feb  4 09:48:15 2022
 
 @author: amandabreton
+
+Function: Moves audio files above a given threshold to a given
+folder, and audio files below threshold to another folder.
 """
 # %% load packages
 import pandas as pd
@@ -33,14 +36,14 @@ for filename in os.listdir(source):
         nonimagecount = +1
         continue
 
-soundList  = []
+soundList = []
 for filename in os.listdir(source):
     if filename.endswith(".WAV") or filename.endswith(".wav"):
         soundList .append(filename)
     else:
         continue
 # %% load up the csv file
-df = pd.read_csv(CSVpath, usecols= ['Audio_Name', 'Highest_Confidence'])
+df = pd.read_csv(CSVpath, usecols=['Audio_Name', 'Highest_Confidence'])
 
 # %% sort high and low confidence files into seperate folder
 
@@ -51,4 +54,3 @@ for i in range(len(['Audio_Name'])):
         shutil.move(source + filename, highdestination+filename)
     else:
         shutil.move(source + filename, lowdestination+filename)
-        
