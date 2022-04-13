@@ -1,14 +1,15 @@
 # ECE-590-Identification-of-Species
-Repository for ECE 590: Rainforest Engineering/Sp22 XPRIZE Identification of Species Team
+Repository for ECE 590: Rainforest Engineering/Sp22 XPRIZE Identification of 
+Species Team.
 Includes Identification tools for Audio and Video
 
 ## Table of Contents
 * [Technologies](#technologies)
 * [Installation](#installation)
-* [General info: Audio](#general-info-audio)
-* [Instructions for Audio](#instructions-audio)
-* [General info: Video](#general-info-video)
-* [Instructions for Video](#instructions-video)
+* [Audio: General info](#audio-general-info)
+* [Audio: Instructions](#instructions-audio)
+* [Video: General info](#video-general-info)
+* [Video: Instructions](#instructions-video)
 
 ## [Technologies](#technologies)
 This project is made possible thanks to: 
@@ -29,11 +30,11 @@ This project is made possible thanks to:
       school={Chemnitz University of Technology}}
     * Install microfaune (https://github.com/microfaune/microfaune)
       * pip install microfaune-ai
-    * Install the following packages if needed: 
+    * Install the following packages if needed using pip install: 
       pandas, os, scipy, pydub, shutil, math, tensorflow (version 2.3.0 ideal),
       pillow, google.cloud, google-cloud-vision, opencv-python
 
-## [General info: Audio](#general-info-audio)
+## [Audio: General info](#audio-general-info)
 The python codes you will need analyzing and sorting audio data from field 
 recordings and descriptions of what they do follow below:
 
@@ -43,7 +44,7 @@ recordings and descriptions of what they do follow below:
 * SortConfidences: Moves audio files above a given threshold to a given
   folder, and audio files below threshold to another folder.
 
-## [Instructions for Audio](#instructions-audio)
+## [Audio: Instructions](#instructions-audio)
 1. Complete #installation
 2. See if statements below:
   * If audio file(s) are longer than desired length, place into folder called 
@@ -62,7 +63,7 @@ recordings and descriptions of what they do follow below:
     by accesing the folder called "audio_nobirds"
 
 
-## [General info: Video](#general-info-video)
+## [Video: General info](#video-general-info)
 The python codes you will need analyzing and sorting video data from field/drone 
 recordings and descriptions of what they do follow below:
 
@@ -71,7 +72,7 @@ recordings and descriptions of what they do follow below:
 * FilterImages.py: Crops the images gotten from FilterVideos.py to only contain
   the object of interest and sorts them into labeled folders. 
   
-## [Instructions for Video](#instructions-video)
+## [Video: Instructions](#instructions-video)
 1. Complete #installation
 2. Place your videos into the folder called "input"
 3. Go to terminal and cd into the folder containing the code. 
