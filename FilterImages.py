@@ -144,4 +144,9 @@ for f in os.listdir(inputPath):
     if (f.endswith('.png') or f.endswith('.jpeg') or f.endswith('.jpg')):
         draw_boundaries(os.path.join(inputPath, f))
 
+<<<<<<< HEAD
 print('Done you may view images now :)')
+=======
+print('Done')
+
+>>>>>>> 175a65df69032cb376c6d8c1ab42d5877f459e53
