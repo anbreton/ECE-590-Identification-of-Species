@@ -17,6 +17,7 @@ This project is made possible thanks to:
 * Spyder 4
 * microfaune (https://github.com/microfaune/microfaune)
 * BirdNet (https://github.com/kahst/BirdNET)
+* Google Cloud Vision
 * Laptop provided by Dr. Matrin Brooke (Duke University)
 
 ## [Installation](#installation)
