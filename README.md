@@ -47,11 +47,11 @@ recordings and descriptions of what they do follow below:
 ## [Audio: Instructions](#instructions-audio)
 1. Complete #installation
 2. See if statements below:
-  * If audio file(s) are longer than desired length, place into folder called 
+    * If audio file(s) are longer than desired length, place into folder called 
     "audio_ToSplit". Audio files will be split into 1 minute sections saved as
     .wav files. If you wish for a different duration of time, please edit 
     SplitAudio.py accordingly. 
-  * If audio files are desired length into the folder called "audio_input". 
+    * If audio files are desired length into the folder called "audio_input". 
 5. Go to terminal and cd into the folder containing the code. 
 6. In the terminal type: python SplitAudio.py 
 7. In the terminal type: python BirdNoBird.py 
@@ -59,7 +59,7 @@ recordings and descriptions of what they do follow below:
 8. In the terminal type: python SortConfidences.py
 9. To listen to audio files with birds, listen to audio files located in folder
    called "audio_bestbirds". 
-  * if you want to listen to things that probably do not contain birds, you can
+    * if you want to listen to things that probably do not contain birds, you can
     by accesing the folder called "audio_nobirds"
 
 
