@@ -32,7 +32,8 @@ This project is made possible thanks to:
       * pip install microfaune-ai
     * Install the following packages if needed using pip install: 
       pandas, os, scipy, pydub, shutil, math, tensorflow (version 2.3.0 ideal),
-      pillow, google.cloud, google-cloud-vision, opencv-python
+      pillow, google.cloud, google-cloud-vision, opencv-python, 
+      scikit-image opencv-python imutils
 
 ## [Audio: General info](#audio-general-info)
 The python codes you will need analyzing and sorting audio data from field 
@@ -67,7 +68,7 @@ recordings and descriptions of what they do follow below:
 The python codes you will need analyzing and sorting video data from field/drone 
 recordings and descriptions of what they do follow below:
 
-* FilterVideos.py: Crops given video into smaller images sections and picks 
+* FilterVideos.py: Crops given video into smaller images sections and picks
   the most quality unique images to analyze.
 * FilterImages.py: Crops the images gotten from FilterVideos.py to only contain
   the object of interest and sorts them into labeled folders. 
