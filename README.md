@@ -2,6 +2,14 @@
 Repository for ECE 590: Rainforest Engineering/Sp22 XPRIZE Identification of 
 Species Team.
 Includes Identification tools for Audio and Video
+* note: Please make sure: 
+  * video files are in .mp4 
+  * if multiple video files are being analyzed in one batch,  
+  * audio files are mono-channel and .wav/.WAV
+  * if you plan to use BirdNET make sure that audio files are named without
+    any spaces or dashes. 
+        * good example: HouseSparrow.wav
+        * bad example: house sparraw -1 .wav
 
 ## Table of Contents
 * [Technologies](#technologies)
