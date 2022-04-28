@@ -42,7 +42,7 @@ This project is made possible thanks to:
     * Install the following packages if needed using pip install: 
       pandas, os, scipy, pydub, shutil, math, tensorflow (version 2.3.0 ideal),
       pillow, google.cloud, google-cloud-vision, opencv-python, 
-      scikit-image opencv-python imutils
+      scikit-image opencv-python imutils, tensorflow
 
 ## [Audio: General info](#audio-general-info)
 The python codes you will need analyzing and sorting audio data from field 
